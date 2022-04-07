@@ -3,9 +3,9 @@
 1. Create a page that allows users to search for books
 2. Page should include the following:
 
--   Header section introducing the page
--   Form containing a text input and a submit / search button
--   A grid of books
+    - Header section introducing the page
+    - Form containing a text input and a submit / search button
+    - A grid of books
 
 # Instructions:
 
