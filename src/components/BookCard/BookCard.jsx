@@ -20,8 +20,10 @@ const BookCard = ({ book }) => {
     return (
         <div className={styles.BookCard}>
             <img src={image} alt="The book" className={styles.BookCard__img} />
-            <h3>{title}</h3>
-            <p>Authors: {authors}</p>
+            <h2>{title}</h2>
+            <p>
+                <strong>Authors:</strong> {authors}
+            </p>
             <p>{description}</p>
         </div>
     );

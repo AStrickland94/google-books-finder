@@ -16,6 +16,7 @@ const Search = ({ setSearch }) => {
                 type="text"
                 name="search"
                 id="search"
+                placeholder="Type your search here."
                 className={styles.Search__input}
                 onChange={handleChange}
             />
