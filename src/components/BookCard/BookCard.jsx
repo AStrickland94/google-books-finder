@@ -1,11 +1,9 @@
 import styles from "./BookCard.module.scss";
 
 const BookCard = ({ book }) => {
-    console.log(book.volumeInfo.authors);
-
-    const image = book.volumeInfo.imageLinks.thumbnail
+    const image = book.volumeInfo.imageLinks
         ? book.volumeInfo.imageLinks.thumbnail
-        : "";
+        : require("./../../assets/img/no_cover.png");
 
     const title = book.volumeInfo.title
         ? book.volumeInfo.title
@@ -16,17 +14,15 @@ const BookCard = ({ book }) => {
         : "Authors not found";
 
     const description = book.volumeInfo.description
-        ? book.volumeInfo.description.length > 100
-            ? book.volumeInfo.description.slice(0, 100) + " ..."
-            : book.volumeInfo.description
+        ? book.volumeInfo.description.split(" ").slice(0, 20).join(" ") + " ..."
         : "Description not found";
 
     return (
-        <div>
-            <img src={image} />
-            <h3>Title: {title}</h3>
-            <p>Author: {authors}</p>
-            <p>Description: {description}</p>
+        <div className={styles.BookCard}>
+            <img src={image} alt="The book" className={styles.BookCard__img} />
+            <h3>{title}</h3>
+            <p>Authors: {authors}</p>
+            <p>{description}</p>
         </div>
     );
 };

@@ -9,14 +9,19 @@ const Search = ({ setSearch }) => {
 
     return (
         <div className={styles.Search}>
-            <label htmlFor="search">Find the perfect book:</label>
+            <label className={styles.Search__label} htmlFor="search">
+                Find the perfect book:
+            </label>
             <input
                 type="text"
                 name="search"
                 id="search"
+                className={styles.Search__input}
                 onChange={handleChange}
             />
-            <button onClick={handleSearch}>Search</button>
+            <button className={styles.Search__btn} onClick={handleSearch}>
+                Search
+            </button>
         </div>
     );
 };

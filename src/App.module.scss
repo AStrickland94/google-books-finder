@@ -1,0 +1,31 @@
+@use "./assets/css/modules/media.scss";
+@use "./assets/css/partials/palette";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: palette.$background-colour;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -8px;
+
+    &__title {
+        @include media.phone {
+            font-size: 48px;
+        }
+
+        @include media.tablet {
+            font-size: 67px;
+        }
+
+        @include media.computer {
+            font-size: 98px;
+        }
+    }
+}

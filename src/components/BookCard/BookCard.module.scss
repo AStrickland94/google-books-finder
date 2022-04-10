@@ -1,0 +1,16 @@
+@use "../../assets/css/partials/palette";
+
+.BookCard {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 300px;
+    margin: 30px;
+    padding: 0 20px;
+    background-color: palette.$card-colour;
+
+    &__img {
+        width: 128px;
+        margin: 10px;
+    }
+}

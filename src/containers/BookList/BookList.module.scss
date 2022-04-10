@@ -1,0 +1,26 @@
+@use "../../assets/css/modules/media.scss";
+
+.BookList {
+    padding: 0px 100px;
+    &__grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.comment {
+    text-align: center;
+
+    @include media.phone {
+        font-size: 40px;
+    }
+
+    @include media.tablet {
+        font-size: 50px;
+    }
+
+    @include media.computer {
+        font-size: 70px;
+    }
+}
